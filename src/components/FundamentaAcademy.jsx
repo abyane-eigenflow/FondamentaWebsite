@@ -19,6 +19,33 @@ export default function FundamentaAcademy() {
 
     useEffect(() => {
         let ctx = gsap.context(() => {
+            // Aurora Borealis Animation
+            gsap.to('.aurora-orb-1', {
+                rotation: 360,
+                scale: 1.2,
+                duration: 20,
+                ease: 'none',
+                repeat: -1,
+                yoyo: true
+            });
+            gsap.to('.aurora-orb-2', {
+                rotation: -360,
+                scale: 1.5,
+                duration: 25,
+                ease: 'none',
+                repeat: -1,
+                yoyo: true
+            });
+            gsap.to('.aurora-orb-3', {
+                xPercent: 20,
+                yPercent: 20,
+                duration: 15,
+                ease: 'sine.inOut',
+                repeat: -1,
+                yoyo: true
+            });
+
+
             // Title Animation
             gsap.fromTo('.academy-title-word',
                 { opacity: 0, y: 50 },
@@ -90,14 +117,6 @@ export default function FundamentaAcademy() {
 
     // Layout configuration for the asymmetric grid
     const getColSpan = (index) => {
-        // Desktop layouts:
-        // Item 0: spans 2 cols
-        // Item 1: spans 1 col
-        // Item 2: spans 1 col
-        // Item 3: spans 2 cols
-        // Item 4: spans 2 cols
-        // Item 5: spans 1 col
-        // Total columns = 3
         const spanMap = {
             0: "md:col-span-2",
             1: "md:col-span-1",
@@ -110,21 +129,29 @@ export default function FundamentaAcademy() {
     };
 
     return (
-        <section id="fundamenta-academy" ref={sectionRef} className="py-32 px-4 relative bg-fa-deep overflow-hidden">
-            {/* Background ambient light */}
-            <div className="absolute top-0 right-0 w-[40vw] h-[40vw] max-w-[600px] bg-fa-bright-blue/10 blur-[150px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
+        <section id="fundamenta-academy" ref={sectionRef} className="py-32 px-4 relative overflow-hidden bg-transparent">
+            {/* The Aurora Borealis Halo */}
+            <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+                <div className="absolute inset-0 bg-white/50 backdrop-blur-[100px] z-10"></div>
+                <div className="aurora-orb-1 absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] max-w-[1000px] bg-fa-bright-blue/30 blur-[120px] rounded-full mix-blend-multiply opacity-70"></div>
+                <div className="aurora-orb-2 absolute top-[10%] right-[-10%] w-[70vw] h-[70vw] max-w-[1200px] bg-fa-neon-pink/20 blur-[150px] rounded-full mix-blend-multiply opacity-60"></div>
+                <div className="aurora-orb-3 absolute top-[40%] left-[20%] w-[50vw] h-[50vw] max-w-[900px] bg-purple-400/20 blur-[120px] rounded-full mix-blend-multiply opacity-50"></div>
 
-            <div className="max-w-6xl mx-auto relative z-10 flex flex-col items-center">
+                {/* Smooth fade to pure white at the bottom */}
+                <div className="absolute bottom-0 left-0 w-full h-[400px] bg-gradient-to-t from-white via-white/80 to-transparent z-20"></div>
+            </div>
+
+            <div className="max-w-6xl mx-auto relative z-20 flex flex-col items-center">
 
                 {/* Header Section */}
                 <div className="text-center mb-16 md:mb-24">
                     <h2 className="font-display font-bold text-5xl md:text-6xl lg:text-[5.5rem] tracking-tighter mb-8 flex flex-col sm:flex-row items-center justify-center gap-3 overflow-hidden">
-                        <span className="academy-title-word text-fa-bright-blue drop-shadow-[0_0_20px_rgba(0,102,255,0.3)]">FUNDAMENTA</span>
-                        <span className="academy-title-word text-fa-neon-pink drop-shadow-[0_0_20px_rgba(255,0,127,0.3)]">ACADEMY</span>
+                        <span className="academy-title-word text-fa-bright-blue drop-shadow-[0_0_20px_rgba(0,102,255,0.2)]">FUNDAMENTA</span>
+                        <span className="academy-title-word text-fa-neon-pink drop-shadow-[0_0_20px_rgba(255,0,127,0.2)]">ACADEMY</span>
                     </h2>
 
-                    <p className="academy-subtitle text-lg md:text-2xl text-fa-ivory/80 font-medium max-w-2xl mx-auto">
-                        Dans Fundamenta Academy, j'ai créé une <span className="text-fa-ivory italic">safe place</span> où vous allez apprendre à :
+                    <p className="academy-subtitle text-lg md:text-2xl text-fa-deep/80 font-medium max-w-2xl mx-auto">
+                        Dans Fundamenta Academy, j'ai créé une <span className="text-fa-deep italic font-bold">safe place</span> où vous allez apprendre à :
                     </p>
                 </div>
 
@@ -134,18 +161,18 @@ export default function FundamentaAcademy() {
                         <div
                             key={index}
                             ref={el => cardsRef.current[index] = el}
-                            className={`glass group relative overflow-hidden rounded-[2rem] border border-white/5 hover:border-fa-neon-pink/30 hover:shadow-[0_0_30px_rgba(255,0,127,0.15)] hover:bg-white/[0.04] transition-all duration-500 flex flex-col justify-end p-8 md:p-10 ${getColSpan(index)}`}
+                            className={`group relative overflow-hidden rounded-[2rem] border border-black/5 bg-white shadow-[0_4px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border-black/10 transition-all duration-500 flex flex-col justify-end p-8 md:p-10 ${getColSpan(index)}`}
                         >
                             {/* Giant Background Number */}
-                            <div className="absolute top-2 right-4 text-[8rem] md:text-[12rem] font-bold leading-none text-white/[0.03] group-hover:text-fa-neon-pink/10 transition-colors duration-500 select-none font-display pointer-events-none">
+                            <div className="absolute top-2 right-4 text-[8rem] md:text-[12rem] font-bold leading-none text-black/[0.02] group-hover:text-fa-neon-pink/10 transition-colors duration-500 select-none font-display pointer-events-none">
                                 0{index + 1}
                             </div>
 
                             {/* Subtle Neon Line Sweep on Hover */}
-                            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-fa-bright-blue via-fa-neon-pink to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left opacity-0 group-hover:opacity-100"></div>
+                            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-fa-bright-blue via-fa-neon-pink to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left opacity-0 group-hover:opacity-100"></div>
 
                             {/* Content */}
-                            <h3 className="relative z-10 font-display italic font-bold text-2xl md:text-4xl text-fa-ivory/90 group-hover:text-white transition-colors duration-300 drop-shadow-md">
+                            <h3 className="relative z-10 font-display italic font-bold text-2xl md:text-4xl text-fa-deep/90 group-hover:text-black transition-colors duration-300">
                                 {point}
                             </h3>
                         </div>
@@ -154,11 +181,11 @@ export default function FundamentaAcademy() {
 
                 {/* The Punchline Conclusion */}
                 <div className="academy-conclusion text-center max-w-4xl mx-auto relative">
-                    <div className="absolute inset-0 bg-fa-bright-blue/10 blur-[100px] rounded-full scale-150 -z-10"></div>
-                    <h3 className="font-display italic text-3xl md:text-5xl lg:text-6xl text-fa-ivory leading-[1.2] drop-shadow-xl font-medium">
+                    <div className="absolute inset-0 bg-fa-bright-blue/5 blur-[100px] rounded-full scale-150 -z-10"></div>
+                    <h3 className="font-display italic text-3xl md:text-5xl lg:text-6xl text-fa-deep leading-[1.2] font-medium">
                         Parce qu’un couple ne se sépare pas par manque d’amour.<br className="hidden md:block" />
-                        <span className="block mt-4 text-fa-ivory/70">Il se sépare par manque de</span>
-                        <span className="text-fa-neon-pink block mt-2 drop-shadow-[0_0_25px_rgba(255,0,127,0.5)]">compétences relationnelles.</span>
+                        <span className="block mt-4 text-fa-deep/70">Il se sépare par manque de</span>
+                        <span className="text-fa-neon-pink block mt-2 drop-shadow-[0_0_20px_rgba(255,0,127,0.3)]">compétences relationnelles.</span>
                     </h3>
                 </div>
 

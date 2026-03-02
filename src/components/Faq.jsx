@@ -31,9 +31,9 @@ export default function Faq() {
     };
 
     return (
-        <section className="py-24 px-4 bg-fa-deep text-fa-ivory border-t border-black/5">
+        <section className="py-24 px-4 bg-white border-t border-black/5">
             <div className="max-w-3xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-display font-medium text-center mb-16 text-fa-deep">
                     Des questions ?
                 </h2>
 
@@ -45,22 +45,22 @@ export default function Faq() {
                                 key={index}
                                 className={twMerge(
                                     "border rounded-3xl overflow-hidden transition-all duration-300",
-                                    isOpen ? "border-fa-neon-pink/50 bg-black/5" : "border-black/10 bg-fa-surface"
+                                    isOpen ? "border-fa-neon-pink/50 bg-black/5" : "border-black/10 bg-white shadow-sm hover:shadow-md"
                                 )}
                             >
                                 <button
                                     onClick={() => toggle(index)}
-                                    className="w-full flex items-center justify-between p-6 md:p-8 text-left font-sans font-semibold text-lg hover:text-white transition-colors"
+                                    className="w-full flex items-center justify-between p-6 md:p-8 text-left font-sans font-semibold text-lg text-fa-deep hover:text-fa-neon-pink transition-colors"
                                 >
                                     <span className="pr-8">{item.q}</span>
-                                    <span className="shrink-0 text-fa-ivory/50">
+                                    <span className="shrink-0 text-fa-deep/50">
                                         {isOpen ? <Minus className="w-5 h-5 text-fa-neon-pink" /> : <Plus className="w-5 h-5" />}
                                     </span>
                                 </button>
 
                                 <div
                                     className={twMerge(
-                                        "px-6 md:px-8 overflow-hidden transition-all duration-300 ease-in-out font-mono text-sm md:text-base text-fa-ivory/70 leading-relaxed",
+                                        "px-6 md:px-8 overflow-hidden transition-all duration-300 ease-in-out font-mono text-sm md:text-base text-fa-deep/70 leading-relaxed",
                                         isOpen ? "max-h-96 pb-6 md:pb-8 opacity-100" : "max-h-0 opacity-0"
                                     )}
                                 >

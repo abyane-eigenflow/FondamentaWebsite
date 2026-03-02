@@ -129,7 +129,7 @@ export default function Hero() {
                     </h1>
 
                     <div className="hero-subtitle invisible mb-10 text-lg md:text-xl text-fa-ivory/80 max-w-xl mx-auto lg:mx-0">
-                        <p className="mb-4 font-medium text-fa-ivory">On ne nous a jamais appris à vivre à deux.</p>
+                        <p className="mb-4 font-medium text-fa-ivory">Vivre à 2 c'est simple, il suffit d’apprendre.</p>
                         <p className="mb-4">Résultat : on s’aime… mais on se détruit à force de mal se parler. Chaque discussion finit invariablement en tension, silence ou conflit.</p>
                         <p className="text-fa-ivory/70 text-base">Tu portes tout, émotionnellement et mentalement, au point de douter : est-ce « un mauvais moment » à passer, ou est-ce « la mauvaise personne » ?</p>
                     </div>

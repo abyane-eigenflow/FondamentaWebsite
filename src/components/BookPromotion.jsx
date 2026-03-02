@@ -49,7 +49,7 @@ export default function BookPromotion() {
     ];
 
     return (
-        <section ref={sectionRef} className="py-24 px-4 bg-fa-deep relative overflow-hidden border-t border-white/5">
+        <section ref={sectionRef} className="py-24 px-4 relative overflow-hidden border-t border-black/5">
             {/* Ambient Background glow */}
             <div className="absolute top-1/2 left-1/4 w-[40vw] h-[40vw] bg-fa-neon-pink/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2"></div>
 
@@ -65,8 +65,8 @@ export default function BookPromotion() {
                         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
 
                         <BookOpen className="w-16 h-16 text-fa-bright-blue mb-6 opacity-80" />
-                        <h3 className="font-display font-bold text-2xl text-fa-ivory mb-2">Vivre à 2, c'est simple</h3>
-                        <p className="text-fa-ivory/50 text-sm italic">Emplacement pour la couverture du livre (PNG)</p>
+                        <h3 className="font-display font-bold text-2xl text-white mb-2">Vivre à 2, c'est simple</h3>
+                        <p className="text-white/50 text-sm italic">Emplacement pour la couverture du livre (PNG)</p>
                     </div>
                     {/* Pedestal Glow */}
                     <div className="absolute bottom-[-10%] left-1/2 -translate-x-1/2 w-64 h-8 bg-fa-bright-blue/20 blur-xl rounded-[100%]"></div>
@@ -78,18 +78,18 @@ export default function BookPromotion() {
                         Prolongez la transformation
                     </h2>
 
-                    <h3 className="font-display font-bold text-5xl md:text-6xl text-fa-ivory leading-tight mb-6">
+                    <h3 className="font-display font-bold text-5xl md:text-6xl text-fa-deep leading-tight mb-6">
                         Le manuel pour <br /><span className="text-fa-neon-pink">ceux qui osent.</span>
                     </h3>
 
-                    <p className="text-fa-ivory/70 text-lg md:text-xl mb-10 max-w-lg font-sans leading-relaxed">
+                    <p className="text-fa-deep/80 text-lg md:text-xl mb-10 max-w-lg font-sans leading-relaxed">
                         L’art de construire son couple ne s’improvise pas. Découvrez les clés pour devenir la bonne personne et attirer une relation extraordinaire dans le livre de Maïra,
-                        <span className="italic text-fa-ivory font-medium"> « Vivre à 2, c'est simple »</span>.
+                        <span className="italic text-fa-deep font-bold"> « Vivre à 2, c'est simple »</span>.
                     </p>
 
                     <ul className="space-y-4 mb-12">
                         {benefits.map((benefit, idx) => (
-                            <li key={idx} className="flex items-start gap-3 text-fa-ivory/80 text-lg">
+                            <li key={idx} className="flex items-start gap-3 text-fa-deep/90 text-lg">
                                 <CheckCircle2 className="w-6 h-6 text-fa-bright-blue shrink-0 mt-0.5" />
                                 <span className="text-left font-medium">{benefit}</span>
                             </li>
@@ -98,7 +98,7 @@ export default function BookPromotion() {
 
                     <a
                         href="#buy-book"
-                        className="btn-magnetic w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 bg-fa-bright-blue text-fa-deep rounded-full font-bold text-lg hover:shadow-[0_0_30px_rgba(0,102,255,0.4)] transition-all"
+                        className="btn-magnetic w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 bg-fa-bright-blue text-white rounded-full font-bold text-lg hover:shadow-[0_0_30px_rgba(0,102,255,0.4)] transition-all"
                     >
                         Commander le livre
                     </a>

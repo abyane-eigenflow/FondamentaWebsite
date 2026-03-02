@@ -9,7 +9,6 @@ import FundamentaAcademy from './components/FundamentaAcademy';
 import Segmentation from './components/Segmentation';
 import Manifesto from './components/Manifesto';
 import SocialProofAndOffers from './components/SocialProofAndOffers';
-import BookPromotion from './components/BookPromotion';
 import Faq from './components/Faq';
 import FloatingDiamondContainer from './components/FloatingDiamondContainer';
 import MultiStepLeadForm from './components/MultiStepLeadForm';
@@ -37,12 +36,14 @@ function App() {
       <Hero />
       <Vsl />
       <LeCadre />
-      <FundamentaAcademy />
-      <Segmentation />
-      <Manifesto />
-      <SocialProofAndOffers />
-      <BookPromotion />
-      <Faq />
+      <div className="bg-white text-fa-deep relative z-20 transition-colors duration-1000">
+        {/* Aurora Borealis base container here conceptually, but rendered in FundamentaAcademy */}
+        <FundamentaAcademy />
+        <Segmentation />
+        <Manifesto />
+        <SocialProofAndOffers />
+        <Faq />
+      </div>
       <MultiStepLeadForm />
     </div>
   );

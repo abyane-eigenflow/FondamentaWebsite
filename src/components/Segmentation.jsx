@@ -32,11 +32,11 @@ export default function Segmentation() {
     ];
 
     return (
-        <section className="py-24 px-4 bg-fa-deep">
+        <section className="py-24 px-4">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl md:text-5xl font-display font-medium text-center mb-16 text-fa-ivory">
+                <h2 className="text-3xl md:text-5xl font-display font-medium text-center mb-16 text-fa-deep">
                     Tu veux une relation extraordinaire ?<br />
-                    <span className="italic text-fa-ivory/70">Deviens une personne extraordinaire.</span>
+                    <span className="italic text-fa-deep/70">Deviens une personne extraordinaire.</span>
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 outline-none">
@@ -50,33 +50,32 @@ export default function Segmentation() {
                                 onMouseEnter={() => setHoveredIndex(idx)}
                                 onMouseLeave={() => setHoveredIndex(null)}
                                 className={twMerge(
-                                    "group relative p-10 md:p-14 rounded-[3rem] bg-fa-surface border transition-all duration-500 overflow-hidden cursor-crosshair flex flex-col justify-center min-h-[400px]",
-                                    isOtherHovered ? "opacity-50 blur-sm border-black/5" : "border-black/10",
-                                    path.borderColor,
+                                    "group relative p-10 md:p-14 rounded-[3rem] bg-white border shadow-[0_4px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 overflow-hidden cursor-crosshair flex flex-col justify-center min-h-[400px]",
+                                    isOtherHovered ? "opacity-50 blur-sm border-black/5" : "border-black/10 hover:border-black/20",
                                     path.glowColor
                                 )}
                             >
                                 <div className="relative z-10">
                                     {path.icon}
-                                    <h3 className="text-3xl font-display font-bold mb-8 transition-transform duration-500 group-hover:-translate-y-2">
+                                    <h3 className="text-3xl font-display font-bold mb-8 transition-transform duration-500 group-hover:-translate-y-2 text-fa-deep">
                                         {path.title}
                                     </h3>
 
                                     <div className={twMerge(
-                                        "flex flex-col gap-4 font-sans text-fa-ivory/80 transition-all duration-500 overflow-hidden",
+                                        "flex flex-col gap-4 font-sans text-fa-deep/80 transition-all duration-500 overflow-hidden",
                                         // We reveal on hover by scaling/opacity. On mobile we show it always, or handle via simple CSS hover rules.
                                         "opacity-100 md:opacity-0 md:translate-y-4 group-hover:opacity-100 group-hover:translate-y-0"
                                     )}>
                                         {path.bullets.map((b, i) => (
                                             <div key={i} className="flex items-center gap-3">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-fa-ivory/50"></div>
+                                                <div className="w-1.5 h-1.5 rounded-full bg-fa-deep/30"></div>
                                                 <span>{b}</span>
                                             </div>
                                         ))}
                                     </div>
 
                                     <div className="mt-10 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                                        <a href="#candidature" className="btn-candidature btn-magnetic w-full block py-4 bg-fa-ivory text-fa-deep rounded-full text-center font-bold">
+                                        <a href="#candidature" className="btn-candidature btn-magnetic w-full block py-4 bg-fa-deep text-fa-ivory rounded-full text-center font-bold">
                                             Réserver une première séance
                                         </a>
                                     </div>

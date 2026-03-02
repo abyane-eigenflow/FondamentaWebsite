@@ -28,25 +28,25 @@ export default function SocialProofAndOffers() {
     }, []);
 
     return (
-        <section className="bg-fa-deep relative pb-24">
+        <section className="relative pb-24">
 
             {/* Social Proof Marquee */}
             <div className="py-24 overflow-hidden border-b border-black/5">
-                <h2 className="text-center font-display italic text-3xl md:text-5xl text-fa-ivory mb-16">
+                <h2 className="text-center font-display italic text-3xl md:text-5xl text-fa-deep mb-16">
                     “Ils étaient au bord de la rupture…”
                 </h2>
 
                 <div className="flex whitespace-nowrap" ref={marqueeRef}>
                     {/* Duplicate the reviews array to make it seamless */}
                     {[...reviews, ...reviews, ...reviews].map((review, idx) => (
-                        <div key={idx} className="inline-block p-8 mx-4 w-80 md:w-96 rounded-[2rem] bg-fa-surface border border-black/10 shrink-0 whitespace-normal">
+                        <div key={idx} className="inline-block p-8 mx-4 w-80 md:w-96 rounded-[2rem] bg-white border border-black/10 shadow-[0_4px_20px_rgba(0,0,0,0.03)] shrink-0 whitespace-normal">
                             <div className="text-fa-bright-blue mb-4">
                                 {[...Array(5)].map((_, i) => (
                                     <span key={i} className="text-lg">★</span>
                                 ))}
                             </div>
-                            <p className="text-fa-ivory/80 italic mb-6">"{review.text}"</p>
-                            <p className="font-bold text-fa-ivory">— {review.name}</p>
+                            <p className="text-fa-deep/80 italic mb-6">"{review.text}"</p>
+                            <p className="font-bold text-fa-deep">— {review.name}</p>
                         </div>
                     ))}
                 </div>
@@ -55,10 +55,10 @@ export default function SocialProofAndOffers() {
             {/* Video Testimonials Slider */}
             <div className="w-full py-24" id="resa">
                 <div className="text-center md:max-w-2xl mx-auto mb-12 px-4">
-                    <h2 className="font-display font-bold text-4xl md:text-5xl text-fa-ivory mb-6">
+                    <h2 className="font-display font-bold text-4xl md:text-5xl text-fa-deep mb-6">
                         Ils ont transformé leur couple.
                     </h2>
-                    <p className="text-fa-ivory/60 text-lg">
+                    <p className="text-fa-deep/70 text-lg">
                         Découvrez les histoires de ceux qui ont osé faire le travail.
                     </p>
                 </div>
@@ -77,7 +77,7 @@ export default function SocialProofAndOffers() {
                     ].map((video, idx) => (
                         <div
                             key={idx}
-                            className="relative w-[80vw] sm:w-[350px] md:w-[400px] aspect-[9/16] shrink-0 snap-center rounded-[2.5rem] overflow-hidden group cursor-pointer border border-white/10 shadow-2xl bg-fa-surface"
+                            className="relative w-[80vw] sm:w-[350px] md:w-[400px] aspect-[9/16] shrink-0 snap-center rounded-[2.5rem] overflow-hidden group cursor-pointer border border-black/10 shadow-[0_10px_30px_rgba(0,0,0,0.1)] bg-black"
                         >
                             {/* Placeholder Image */}
                             <img
@@ -86,21 +86,21 @@ export default function SocialProofAndOffers() {
                                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale opacity-60 mix-blend-luminosity group-hover:grayscale-0 group-hover:opacity-80"
                             />
 
-                            {/* Gradient Overlay for Text */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-fa-deep via-fa-deep/40 to-transparent z-10 duration-500 group-hover:via-fa-deep/20"></div>
+                            {/* Gradient Overlay for Text (kept dark for contrast with white text) */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 duration-500 group-hover:via-black/20"></div>
 
                             {/* Hover Neon Sweep */}
-                            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-fa-bright-blue to-fa-neon-pink scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left z-20"></div>
+                            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-fa-bright-blue to-fa-neon-pink scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left z-20"></div>
 
                             {/* Play Button Center */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-20 h-20 rounded-full glass flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:border-fa-bright-blue/50 group-hover:bg-white/10 transition-all duration-500 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
-                                <Play className="w-8 h-8 text-fa-ivory fill-fa-ivory translate-x-1" />
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-20 h-20 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:border-fa-bright-blue/50 group-hover:bg-white/20 transition-all duration-500 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
+                                <Play className="w-8 h-8 text-white fill-white translate-x-1" />
                             </div>
 
                             {/* Text Content Bottom */}
                             <div className="absolute bottom-0 left-0 right-0 p-8 z-20 transform transition-transform duration-500 group-hover:-translate-y-2">
-                                <h3 className="font-bold text-fa-ivory text-2xl md:text-3xl mb-3 drop-shadow-md">{video.name}</h3>
-                                <p className="font-display italic text-fa-ivory/80 text-base md:text-lg leading-snug drop-shadow-md">
+                                <h3 className="font-bold text-white text-2xl md:text-3xl mb-3 drop-shadow-md">{video.name}</h3>
+                                <p className="font-display italic text-white/90 text-base md:text-lg leading-snug drop-shadow-md">
                                     "{video.quote}"
                                 </p>
                             </div>
@@ -113,7 +113,7 @@ export default function SocialProofAndOffers() {
 
                 {/* Call to action below the slider */}
                 <div className="text-center mt-8 px-4 relative z-10">
-                    <a href="#candidature" className="btn-candidature btn-magnetic inline-block px-10 py-5 bg-fa-ivory text-fa-deep rounded-full font-bold text-lg hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all">
+                    <a href="#candidature" className="btn-candidature btn-magnetic inline-block px-10 py-5 bg-fa-deep text-fa-ivory rounded-full font-bold text-lg hover:shadow-[0_0_30px_rgba(0,0,0,0.3)] transition-all">
                         Candidater à l'académie
                     </a>
                 </div>
@@ -122,7 +122,7 @@ export default function SocialProofAndOffers() {
             {/* RDV LIVE Strip */}
             <div className="w-full bg-fa-neon-pink text-fa-deep py-8 px-4 relative overflow-hidden flex flex-col items-center justify-center text-center">
                 <h3 className="font-display font-bold text-2xl md:text-3xl mb-2">
-                    Assieds toi, on est en Live : Tous les vendredis à 12h — Live Q/R
+                    Rejoignez-nous en direct : Tous les vendredis à 12h — Live Q/R
                 </h3>
                 <p className="font-medium text-sm md:text-base opacity-80 max-w-3xl">
                     Tu viens avec ta situation. Je te réponds avec des questions qui changent tout.

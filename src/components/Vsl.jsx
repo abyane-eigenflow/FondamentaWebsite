@@ -81,9 +81,6 @@ export default function Vsl() {
                     <a href="#candidature" className="btn-candidature vsl-cta btn-magnetic px-8 py-4 bg-fa-ivory text-fa-deep font-bold rounded-full text-center shadow-[0_0_20px_rgba(250,248,245,0.2)]">
                         Je prends une première séance
                     </a>
-                    <a href="#candidature" className="btn-candidature vsl-cta btn-magnetic px-8 py-4 border border-black/20 hover:bg-black/5 rounded-full text-center font-medium">
-                        Je découvre le programme Fundamenta
-                    </a>
                 </div>
 
             </div>
