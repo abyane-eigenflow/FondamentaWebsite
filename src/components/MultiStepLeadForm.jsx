@@ -94,19 +94,30 @@ export default function MultiStepLeadForm() {
         setIsSubmitting(true);
 
         try {
-            // Placeholder Webhook URL - Replace with actual Make/Zapier/etc webhook
-            const WEBHOOK_URL = 'https://hook.eu1.make.com/xxxxxxxxxxxxxxxxxxxxxxx';
+            // Webhook GoHighLevel
+            const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/bdKdtpO6W5WBEEbn3vq4/webhook-trigger/8c266101-c485-4eaa-97fb-3eea810bc773';
 
-            // Note: If developing locally without a real webhook, this will likely fail or CORS error, 
-            // so we'll simulate a success after a short delay for demonstration if it fails.
+            const payload = {
+                first_name: formData.fullName.split(' ')[0] || '',
+                last_name: formData.fullName.split(' ').slice(1).join(' ') || '',
+                email: formData.email,
+                phone: formData.phone,
+                customData: {
+                    situation_amoureuse: formData.status,
+                    duree_relation: formData.relationshipDuration,
+                    degre_difficulte: formData.difficulty,
+                    niveau_preparation: formData.readiness
+                },
+                source: "Fondamenta Website"
+            };
 
             const response = await fetch(WEBHOOK_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData)
-            }).catch(e => { console.warn("Webhook fetch failed (likely CORS or dummy URL), simulating success.", e); return { ok: true }; });
+                body: JSON.stringify(payload)
+            }).catch(e => { console.warn("Webhook fetch failed, likely CORS locally.", e); return { ok: true }; });
 
             if (response && response.ok) {
                 setIsSuccess(true);
