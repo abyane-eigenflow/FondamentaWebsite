@@ -95,7 +95,7 @@ export default function MultiStepLeadForm() {
 
         try {
             // Webhook GoHighLevel
-            const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/bdKdtpO6W5WBEEbn3vq4/webhook-trigger/8c266101-c485-4eaa-97fb-3eea810bc773';
+            const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/bdKdtpO6W5WBEEbn3vq4/webhook-trigger/30b19409-21e5-4530-bd09-ce884756f6b7';
 
             const payload = {
                 first_name: formData.fullName.split(' ')[0] || '',
