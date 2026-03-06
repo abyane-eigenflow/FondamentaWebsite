@@ -117,28 +117,28 @@ export default function Hero() {
                         <img
                             src="/client-portrait-cut.png"
                             alt="Portrait"
-                            className="relative z-10 w-auto max-w-[130%] h-[50vh] md:h-[75vh] lg:h-[90vh] max-h-[90%] object-contain object-bottom drop-shadow-[0_0_40px_rgba(0,0,0,0.8)] translate-y-4"
+                            className="relative z-10 w-auto max-w-[130%] h-[65vh] md:h-[75vh] lg:h-[90vh] max-h-[90%] object-contain object-bottom drop-shadow-[0_0_40px_rgba(0,0,0,0.8)] translate-y-4"
                         />
                     </div>
                 </div>
 
                 {/* Right Column: Text Content */}
                 <div className="flex flex-col text-center lg:text-left order-1 lg:order-2 self-center pb-8 lg:pb-20">
-                    <h1 className="hero-title invisible font-display italic text-4xl md:text-7xl font-medium leading-tight mb-6 drop-shadow-lg">
+                    <h1 className="hero-title invisible font-display italic text-4xl md:text-7xl font-medium leading-tight mb-5 md:mb-8 drop-shadow-lg">
                         “Assieds-toi. <br className="hidden md:block" /> Faut qu’on parle.”
                     </h1>
 
-                    <div className="hero-subtitle invisible mb-8 text-base md:text-xl text-fa-ivory/80 max-w-xl mx-auto lg:mx-0">
+                    <div className="hero-subtitle invisible mb-10 text-lg md:text-xl text-fa-ivory/80 max-w-xl mx-auto lg:mx-0">
                         <p className="mb-4 font-medium text-fa-ivory">Vivre à 2 c'est simple, il suffit d’apprendre.</p>
-                        <p className="mb-4">Résultat : on s’aime… mais on se détruit à force de mal se parler. Chaque discussion finit invariablement en tension, silence ou conflit.</p>
-                        <p className="text-fa-ivory/70 text-base">Tu portes tout, émotionnellement et mentalement, au point de douter : est-ce « un mauvais moment » à passer, ou est-ce « la mauvaise personne » ?</p>
+                        <p className="mb-4 hidden sm:block">Résultat : on s’aime… mais on se détruit à force de mal se parler. Chaque discussion finit invariablement en tension, silence ou conflit.</p>
+                        <p className="text-fa-ivory/70 text-base hidden sm:block">Tu portes tout, émotionnellement et mentalement, au point de douter : est-ce « un mauvais moment » à passer, ou est-ce « la mauvaise personne » ?</p>
                     </div>
 
-                    <div className="hero-actions invisible flex flex-col sm:flex-row gap-3 w-full justify-center lg:justify-start">
-                        <a href="#vsl" className="btn-magnetic w-full sm:w-auto py-4 px-8 rounded-full bg-fa-neon-pink hover:bg-pink-500 text-fa-deep font-bold shadow-[0_0_20px_rgba(255,0,127,0.4)] text-center text-base md:text-lg z-20">
+                    <div className="hero-actions invisible flex flex-col sm:flex-row gap-4 w-full justify-center lg:justify-start">
+                        <a href="#vsl" className="btn-magnetic hidden sm:block py-4 px-8 rounded-full bg-fa-neon-pink hover:bg-pink-500 text-fa-deep font-bold shadow-[0_0_20px_rgba(255,0,127,0.4)] text-center text-lg z-20">
                             Regarder la vidéo
                         </a>
-                        <a href="#candidature" className="btn-candidature btn-magnetic w-full sm:w-auto py-4 px-8 rounded-full border border-fa-ivory/20 hover:bg-black/10 font-semibold text-center backdrop-blur-md bg-fa-deep/30 text-base md:text-lg z-20">
+                        <a href="#candidature" className="btn-candidature btn-magnetic py-4 px-8 rounded-full font-bold text-center text-lg z-20 bg-fa-neon-pink text-fa-deep shadow-[0_0_24px_rgba(255,0,127,0.5)] sm:bg-transparent sm:text-fa-ivory sm:font-semibold sm:shadow-none sm:border sm:border-fa-ivory/20 sm:hover:bg-black/10 sm:backdrop-blur-md">
                             Réserver
                         </a>
                     </div>
