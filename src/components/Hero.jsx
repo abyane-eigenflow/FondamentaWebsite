@@ -121,7 +121,7 @@ export default function Hero() {
                 </div>
 
                 {/* Text overlay — top of screen */}
-                <div className="absolute top-20 left-0 right-0 px-5 flex flex-col items-center text-center z-30">
+                <div className="absolute top-[34%] -translate-y-1/2 left-0 right-0 px-5 flex flex-col items-center text-center z-30">
                     <h1 className="hero-title invisible font-display italic text-[2.4rem] leading-[1.15] font-medium mb-3 drop-shadow-lg text-fa-ivory">
                         &ldquo;Assieds-toi.<br /> Faut qu&rsquo;on parle.&rdquo;
                     </h1>
@@ -131,7 +131,7 @@ export default function Hero() {
                 </div>
 
                 {/* CTA pinned to the bottom on the portrait */}
-                <div className="hero-actions invisible absolute bottom-6 left-4 right-4 z-30">
+                <div className="hero-actions invisible absolute bottom-14 left-4 right-4 z-30">
                     <a href="#candidature" className="btn-candidature btn-magnetic w-full block py-5 rounded-full font-bold text-center text-lg bg-fa-neon-pink text-fa-deep shadow-[0_0_30px_rgba(255,0,127,0.6)] hover:bg-pink-500 transition-colors">
                         Réserver
                     </a>
