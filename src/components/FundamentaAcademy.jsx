@@ -144,7 +144,7 @@ export default function FundamentaAcademy() {
             <div className="max-w-6xl mx-auto relative z-20 flex flex-col items-center">
 
                 {/* Header Section */}
-                <div className="text-center mb-16 md:mb-24">
+                <div className="text-center mb-10 md:mb-24">
                     <h2 className="font-display font-bold text-5xl md:text-6xl lg:text-[5.5rem] tracking-tighter mb-8 flex flex-col sm:flex-row items-center justify-center gap-3 overflow-hidden">
                         <span className="academy-title-word text-fa-bright-blue drop-shadow-[0_0_20px_rgba(0,102,255,0.2)]">FUNDAMENTA</span>
                         <span className="academy-title-word text-fa-neon-pink drop-shadow-[0_0_20px_rgba(255,0,127,0.2)]">ACADEMY</span>
@@ -156,7 +156,7 @@ export default function FundamentaAcademy() {
                 </div>
 
                 {/* The Asymmetric Bento Grid */}
-                <div className="academy-grid w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-24 md:mb-40 auto-rows-[250px] md:auto-rows-[300px]">
+                <div className="academy-grid w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-16 md:mb-40 auto-rows-[160px] md:auto-rows-[300px]">
                     {learningPoints.map((point, index) => (
                         <div
                             key={index}
@@ -172,7 +172,7 @@ export default function FundamentaAcademy() {
                             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-fa-bright-blue via-fa-neon-pink to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left opacity-0 group-hover:opacity-100"></div>
 
                             {/* Content */}
-                            <h3 className="relative z-10 font-display italic font-bold text-2xl md:text-4xl text-fa-deep/90 group-hover:text-black transition-colors duration-300">
+                            <h3 className="relative z-10 font-display italic font-bold text-xl md:text-4xl text-fa-deep/90 group-hover:text-black transition-colors duration-300">
                                 {point}
                             </h3>
                         </div>

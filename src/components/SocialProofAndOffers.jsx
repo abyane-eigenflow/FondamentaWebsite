@@ -20,7 +20,7 @@ export default function SocialProofAndOffers() {
             gsap.to(marqueeRef.current, {
                 xPercent: -50,
                 repeat: -1,
-                duration: 20,
+                duration: 30,
                 ease: 'linear'
             });
         });

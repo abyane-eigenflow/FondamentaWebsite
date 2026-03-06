@@ -80,15 +80,15 @@ export default function LeCadre() {
             {/* Subtle background glow connecting to Hero/VSL */}
             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-fa-neon-pink/5 blur-[120px] rounded-full pointer-events-none"></div>
 
-            <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 px-6 py-24 md:py-48">
+            <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-24 px-5 py-16 md:py-48">
 
                 {/* Left Column: Pinned Editorial Statement */}
                 <div ref={leftColRef} className="flex flex-col justify-center h-fit md:h-[60vh] z-10">
-                    <h2 className="font-display italic text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.1] text-fa-ivory mb-6 tracking-tight drop-shadow-xl">
+                    <h2 className="font-display italic text-4xl md:text-7xl lg:text-[5.5rem] leading-[1.1] text-fa-ivory mb-4 tracking-tight drop-shadow-xl">
                         Je ne “répare” <br />
-                        <span className="text-4xl md:text-6xl lg:text-[4.5rem]">pas ton couple.</span>
+                        <span className="text-3xl md:text-6xl lg:text-[4.5rem]">pas ton couple.</span>
                     </h2>
-                    <h2 className="font-display italic text-4xl md:text-6xl lg:text-[4.5rem] leading-[1.1] text-fa-neon-pink drop-shadow-[0_0_20px_rgba(255,0,127,0.5)] mb-10">
+                    <h2 className="font-display italic text-3xl md:text-6xl lg:text-[4.5rem] leading-[1.1] text-fa-neon-pink drop-shadow-[0_0_20px_rgba(255,0,127,0.5)] mb-6 md:mb-10">
                         Je te rends <br className="hidden md:block" />
                         responsable.
                     </h2>

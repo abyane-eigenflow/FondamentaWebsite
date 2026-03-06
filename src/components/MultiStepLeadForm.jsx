@@ -95,7 +95,7 @@ export default function MultiStepLeadForm() {
 
         try {
             // Webhook GoHighLevel
-            const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/bdKdtpO6W5WBEEbn3vq4/webhook-trigger/30b19409-21e5-4530-bd09-ce884756f6b7';
+            const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/bdKdtpO6W5WBEEbn3vq4/webhook-trigger/72a787ad-e8dd-444d-8998-0d18b527fe0e';
 
             const payload = {
                 first_name: formData.fullName.split(' ')[0] || '',
@@ -160,7 +160,7 @@ export default function MultiStepLeadForm() {
     if (!isOpen) return <div ref={overlayRef} className="fixed inset-0 z-50 pointer-events-none opacity-0 bg-fa-deep/95 backdrop-blur-xl"></div>;
 
     return (
-        <div ref={overlayRef} className="fixed inset-0 z-50 flex items-center justify-center bg-fa-deep/95 backdrop-blur-xl p-4 overflow-y-auto pt-20 pb-20">
+        <div ref={overlayRef} className="fixed inset-0 z-50 flex items-center justify-center bg-fa-deep/95 backdrop-blur-xl p-4 overflow-y-auto" style={{ paddingTop: 'max(5rem, env(safe-area-inset-top))', paddingBottom: 'max(2rem, env(safe-area-inset-bottom))' }}>
 
             {/* Close Button */}
             <button

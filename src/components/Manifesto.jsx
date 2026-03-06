@@ -140,7 +140,7 @@ export default function Manifesto() {
             <div className="absolute bottom-0 right-0 w-[60vw] h-[60vw] bg-fa-neon-pink/5 blur-[150px] rounded-full pointer-events-none translate-x-1/3"></div>
 
             {/* PART 1: Responsabilisation (Mindset) */}
-            <div ref={mindsetRef} className="py-24 md:py-32 px-4 border-b border-black/5 relative z-10 overflow-visible">
+            <div ref={mindsetRef} className="py-16 md:py-32 px-4 border-b border-black/5 relative z-10 overflow-visible">
 
                 {/* Floating Diamond Image */}
                 <div className="floating-diamond absolute top-[25%] right-[-15%] md:right-[-5%] lg:right-[2%] w-48 md:w-64 lg:w-80 pointer-events-none z-0 transform rotate-12 drop-shadow-2xl mix-blend-darken opacity-90 hidden sm:block">
@@ -149,11 +149,11 @@ export default function Manifesto() {
 
                 <div className="max-w-4xl mx-auto text-center flex flex-col items-center relative z-10">
 
-                    <div className="mb-12">
-                        <h2 className="mindset-text font-display text-2xl md:text-4xl text-fa-deep/50 italic mb-4">
+                    <div className="mb-8 md:mb-12">
+                        <h2 className="mindset-text font-display text-xl md:text-4xl text-fa-deep/50 italic mb-3">
                             "Je ne vais pas vous apprendre à changer votre partenaire."
                         </h2>
-                        <h3 className="mindset-text font-display font-bold text-4xl md:text-6xl lg:text-7xl text-fa-deep leading-tight">
+                        <h3 className="mindset-text font-display font-bold text-3xl md:text-6xl lg:text-7xl text-fa-deep leading-tight">
                             Je vais vous apprendre à devenir <span className="text-fa-neon-pink inline-block relative">la bonne personne</span> dans la relation.
                         </h3>
                     </div>
@@ -191,13 +191,13 @@ export default function Manifesto() {
             </div>
 
             {/* PART 2: Positionnement (Maïra) */}
-            <div ref={founderRef} className="py-24 md:py-32 px-4 relative z-10">
+            <div ref={founderRef} className="py-16 md:py-32 px-4 relative z-10">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
 
                     {/* Left: Portrait & Credentials */}
                     <div className="lg:col-span-5 relative">
                         {/* Portrait Frame */}
-                        <div className="founder-portrait relative aspect-[3/4] rounded-[2.5rem] overflow-hidden border border-black/10 shadow-2xl group">
+                        <div className="founder-portrait relative aspect-[3/4] max-h-[300px] md:max-h-none rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-black/10 shadow-2xl group">
                             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent z-10"></div>
                             <img
                                 src="/maira-portrait.jpg"
@@ -237,7 +237,7 @@ export default function Manifesto() {
                     <div className="lg:col-span-7 founder-content flex flex-col">
 
                         <div className="mb-12">
-                            <h2 className="font-display font-bold text-5xl md:text-7xl text-fa-deep mb-6 leading-tight">
+                            <h2 className="font-display font-bold text-4xl md:text-7xl text-fa-deep mb-4 leading-tight">
                                 Je ne <span className="text-fa-neon-pink line-through opacity-80 decoration-fa-neon-pink/50">sauve</span> pas<br />
                                 les couples.
                             </h2>
